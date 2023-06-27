@@ -14,15 +14,13 @@ module.exports = {
     // the default theme is extended with custom styling used by the components
     extend: {
       colors: {
-        primary: "var(--primary-color, #2563eb)",
-        "primary-light": "var(--primary-color-light, #dbeafe)",
-        "primary-dark": "var(--primary-color-dark, #1e40af)",
-        neutral: "var(--neutral-color, #4b5563)",
-        "neutral-light": "var(--neutral-color-light, #9ca3af)",
-        "neutral-dark": "var(--neutral-color-dark, #1f2937)",
-      },
-      borderRadius: {
-        cta: "var(--cta-border-radius, 1rem)",
+        primary: "#a855f7",
+        "primary-light": "#e9d5ff",
+        "primary-dark": "#581c87",
+        neutral: "#4b5563",
+        "neutral-light": "#9ca3af",
+        "neutral-dark": "#1f2937",
+        secondary: "f0abfc",
       },
       keyframes: {
         rotate: {

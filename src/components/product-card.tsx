@@ -65,7 +65,7 @@ CardProps<Product>): JSX.Element => {
       <div className="product-details ml-4 text-lg flex flex-col mb-auto">
         <span className="price">${data.price}</span>
       </div>
-      <PrimaryCta buttonText="Add to Cart" url="" style="bg-purple-500" />
+      <PrimaryCta buttonText={data.cta1.label} url="" style="bg-primary" />
     </div>
   );
 };
