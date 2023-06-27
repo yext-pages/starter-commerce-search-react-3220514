@@ -17,10 +17,11 @@ module.exports = {
         primary: "#a855f7",
         "primary-light": "#e9d5ff",
         "primary-dark": "#581c87",
-        neutral: "#4b5563",
-        "neutral-light": "#9ca3af",
-        "neutral-dark": "#1f2937",
+        neutral: "#d4d4d4",
+        "neutral-light": "#f5f5f5",
+        "neutral-dark": "#a3a3a3",
         secondary: "f0abfc",
+        "secondary-dark": "#e879f9",
       },
       keyframes: {
         rotate: {
