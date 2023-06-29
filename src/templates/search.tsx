@@ -14,20 +14,17 @@ import {
   SearchHeadlessProvider,
   provideHeadless,
 } from "@yext/search-headless-react";
-import { 
-        apiKey,
-        experienceKey,
-} from "../common/consts";
+import { apiKey, experienceKey } from "../common/consts";
 import {
   SearchBar,
   VerticalResults,
-  StandardFacets,
+  Facets,
+  StandardFacet,
   ResultsCount,
   AppliedFilters,
   Pagination,
-  Facets,
 } from "@yext/search-ui-react";
-import Card  from "../components/product-card";
+import Card from "../components/product-card";
 
 export const getPath: GetPath<TemplateProps> = () => {
   return "search";
@@ -59,10 +56,21 @@ const Search: Template<TemplateRenderProps> = () => {
           <ResultsCount />
           <AppliedFilters />
           <div className="flex ">
-            <Facets customCssClasses={{ facetsContainer: "mr-10" }}/>
-            <VerticalResults 
-              CardComponent={Card} 
-              customCssClasses={{ verticalResultsContainer: "flex-grow md:grid gap-4 grid-cols-3 pb-6" }}
+            <Facets
+              customCssClasses={{ facetsContainer: "mr-10" }}
+              searchOnChange={true}
+            >
+              <StandardFacet
+                fieldId="commerce_linkedProductCategories.name"
+                label={"Category"}
+              />
+            </Facets>
+            <VerticalResults
+              CardComponent={Card}
+              customCssClasses={{
+                verticalResultsContainer:
+                  "flex-grow md:grid gap-4 grid-cols-3 pb-6",
+              }}
               displayAllOnNoResults={false}
             />
             <Pagination />
