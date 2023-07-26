@@ -55,13 +55,13 @@ const Search: Template<TemplateRenderProps> = () => {
           <SearchBar />
           <ResultsCount />
           <AppliedFilters />
-          <div className="flex ">
+          <div className="flex">
             <Facets
               customCssClasses={{ facetsContainer: "mr-10" }}
               searchOnChange={true}
             >
               <StandardFacet
-                fieldId="commerce_linkedProductCategories.name"
+                fieldId="commerce_linkedProductCategory.name"
                 label={"Category"}
               />
             </Facets>
@@ -69,7 +69,7 @@ const Search: Template<TemplateRenderProps> = () => {
               CardComponent={Card}
               customCssClasses={{
                 verticalResultsContainer:
-                  "flex-grow md:grid gap-4 grid-cols-3 pb-6",
+                  "flex-grow md:grid gap-4 grid-cols-3 pb-6 ml-5",
               }}
               displayAllOnNoResults={false}
             />
